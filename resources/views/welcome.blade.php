@@ -10,13 +10,13 @@
             <div class="overlay"></div>
             <div class="container-fluid p-0">
                 <div class="row d-md-flex no-gutters slider-text js-fullheight align-items-center justify-content-end" data-scrollax-parent="true">
-                    <div class="one-third order-md-last img js-fullheight" style="background-image:url({{asset('images/bg_1.jpg')}})">
+                    <div class="one-third order-md-last img js-fullheight" style="background-image:url({{asset('assets/images/bg_1.jpg')}})">
                     </div>
                     <div class="one-forth d-flex js-fullheight align-items-center ftco-animate" data-scrollax=" properties: { translateY: '70%' }">
                         <div class="text">
                             <span class="subheading">Winkel eCommerce Shop</span>
                             <div class="horizontal">
-                                <h3 class="vr" style="background-image: url({{asset('images/divider.jpg')}});">Stablished Since 2000</h3>
+                                <h3 class="vr" style="background-image: url({{asset('assets/images/divider.jpg')}});">Stablished Since 2000</h3>
                                 <h1 class="mb-4 mt-3">Catch Your Own <br><span>Stylish &amp; Look</span></h1>
                                 <p>A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country.</p>
 
@@ -32,13 +32,13 @@
             <div class="overlay"></div>
             <div class="container-fluid p-0">
                 <div class="row d-flex no-gutters slider-text js-fullheight align-items-center justify-content-end" data-scrollax-parent="true">
-                    <div class="one-third order-md-last img js-fullheight" style="background-image:url({{asset('images/bg_2.jpg')}})">
+                    <div class="one-third order-md-last img js-fullheight" style="background-image:url({{asset('assets/images/bg_2.jpg')}})">
                     </div>
                     <div class="one-forth d-flex js-fullheight align-items-center ftco-animate" data-scrollax=" properties: { translateY: '70%' }">
                         <div class="text">
                             <span class="subheading">Winkel eCommerce Shop</span>
                             <div class="horizontal">
-                                <h3 class="vr" style="background-image: url({{asset('images/divider.jpg')}});">Best eCommerce Online Shop</h3>
+                                <h3 class="vr" style="background-image: url({{asset('assets/images/divider.jpg')}});">Best eCommerce Online Shop</h3>
                                 <h1 class="mb-4 mt-3">A Thouroughly <span>Modern</span> Woman</h1>
                                 <p>A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country.</p>
 
@@ -55,7 +55,7 @@
 <section class="ftco-section ftco-no-pb ftco-no-pt bg-light">
     <div class="container">
         <div class="row">
-            <div class="col-md-5 p-md-5 img img-2 d-flex justify-content-center align-items-center" style="background-image: url({{asset('images/about.jpg')}});">
+            <div class="col-md-5 p-md-5 img img-2 d-flex justify-content-center align-items-center" style="background-image: url({{asset('assets/images/about.jpg')}})">
                 <a href="https://vimeo.com/45830194" class="icon popup-vimeo d-flex justify-content-center align-items-center">
                     <span class="icon-play"></span>
                 </a>
@@ -122,7 +122,7 @@
         <div class="row">
             <div class="col-sm col-md-6 col-lg ftco-animate">
                 <div class="product">
-                    <a href="#" class="img-prod"><img class="img-fluid" src="{{asset('images/product-1.jpg')}}" alt="Colorlib Template">
+                    <a href="#" class="img-prod"><img class="img-fluid" src="{{asset('assets/images/product-1.jpg')}}" alt="Colorlib Template">
                         <span class="status">30%</span>
                         <div class="overlay"></div>
                     </a>
@@ -151,7 +151,7 @@
             </div>
             <div class="col-sm col-md-6 col-lg ftco-animate">
                 <div class="product">
-                    <a href="#" class="img-prod"><img class="img-fluid" src="{{asset('images/product-2.jpg')}}" alt="Colorlib Template">
+                    <a href="#" class="img-prod"><img class="img-fluid" src="{{asset('assets/images/product-2.jpg')}}" alt="Colorlib Template">
                         <div class="overlay"></div>
                     </a>
                     <div class="text py-3 px-3">
@@ -179,7 +179,7 @@
             </div>
             <div class="col-sm col-md-6 col-lg ftco-animate">
                 <div class="product">
-                    <a href="#" class="img-prod"><img class="img-fluid" src="{{asset('images/product-3.jpg')}}" alt="Colorlib Template">
+                    <a href="#" class="img-prod"><img class="img-fluid" src="{{asset('assets/images/product-3.jpg')}}" alt="Colorlib Template">
                         <div class="overlay"></div>
                     </a>
                     <div class="text py-3 px-3">
@@ -207,7 +207,7 @@
             </div>
             <div class="col-sm col-md-6 col-lg ftco-animate">
                 <div class="product">
-                    <a href="#" class="img-prod"><img class="img-fluid" src="{{asset('images/product-4.jpg')}}" alt="Colorlib Template">
+                    <a href="#" class="img-prod"><img class="img-fluid" src="{{asset('assets/images/product-4.jpg')}}" alt="Colorlib Template">
                         <div class="overlay"></div>
                     </a>
                     <div class="text py-3 px-3">
@@ -241,7 +241,7 @@
     <div class="container">
         <div class="row">
             <div class="col-md-8 d-flex align-items-stretch">
-                <div class="img" style="background-image: url({{asset('images/about-1.jpg')}})"></div>
+                <div class="img" style="background-image: url({{asset('assets/images/about-1.jpg')}})"></div>
             </div>
             <div class="col-md-4 py-md-5 ftco-animate">
                 <div class="text py-3 py-md-5">
@@ -254,7 +254,7 @@
 
         <div class="row">
             <div class="col-md-5 order-md-last d-flex align-items-stretch">
-                <div class="img img-2" style="background-image: url({{asset('images/about-2.jpg')}})"></div>
+                <div class="img img-2" style="background-image: url({{asset('assets/images/about-2.jpg')}})"></div>
             </div>
             <div class="col-md-7 py-3 py-md-5 ftco-animate">
                 <div class="text text-2 py-md-5">
@@ -280,7 +280,7 @@
         <div class="row">
             <div class="col-sm col-md-6 col-lg ftco-animate">
                 <div class="product">
-                    <a href="#" class="img-prod"><img class="img-fluid" src="{{asset('images/product-5.jpg')}}" alt="Colorlib Template">
+                    <a href="#" class="img-prod"><img class="img-fluid" src="{{asset('assets/images/product-5.jpg')}}" alt="Colorlib Template">
                         <span class="status">30%</span>
                         <div class="overlay"></div>
                     </a>
@@ -309,7 +309,7 @@
             </div>
             <div class="col-sm col-md-6 col-lg ftco-animate">
                 <div class="product">
-                    <a href="#" class="img-prod"><img class="img-fluid" src="{{asset('images/product-6.jpg')}}" alt="Colorlib Template">
+                    <a href="#" class="img-prod"><img class="img-fluid" src="{{asset('assets/images/product-6.jpg')}}" alt="Colorlib Template">
                         <div class="overlay"></div>
                     </a>
                     <div class="text py-3 px-3">
@@ -337,7 +337,7 @@
             </div>
             <div class="col-sm col-md-6 col-lg ftco-animate">
                 <div class="product">
-                    <a href="#" class="img-prod"><img class="img-fluid" src="{{asset('images/product-7.jpg')}}" alt="Colorlib Template">
+                    <a href="#" class="img-prod"><img class="img-fluid" src="{{asset('assets/images/product-7.jpg')}}" alt="Colorlib Template">
                         <div class="overlay"></div>
                     </a>
                     <div class="text py-3 px-3">
@@ -365,7 +365,7 @@
             </div>
             <div class="col-sm col-md-6 col-lg ftco-animate">
                 <div class="product">
-                    <a href="#" class="img-prod"><img class="img-fluid" src="{{asset('images/product-8.jpg')}}" alt="Colorlib Template">
+                    <a href="#" class="img-prod"><img class="img-fluid" src="{{asset('assets/images/product-8.jpg')}}" alt="Colorlib Template">
                         <div class="overlay"></div>
                     </a>
                     <div class="text py-3 px-3">
@@ -395,7 +395,7 @@
     </div>
 </section>
 
-<section class="ftco-section ftco-counter img" id="section-counter" style="background-image: url({{asset('images/bg_4.jpg')}})">
+<section class="ftco-section ftco-counter img" id="section-counter" style="background-image: url({{asset('assets/images/bg_4.jpg')}})">
     <div class="container">
         <div class="row justify-content-center py-5">
             <div class="col-md-10">
@@ -451,7 +451,7 @@
                 <div class="carousel-testimony owl-carousel">
                     <div class="item">
                         <div class="testimony-wrap p-4 pb-5">
-                            <div class="user-img mb-5" style="background-image: url({{asset('images/person_1.jpg')}})">
+                            <div class="user-img mb-5" style="background-image: url({{asset('assets/images/person_1.jpg')}})">
                                 <span class="quote d-flex align-items-center justify-content-center">
                                     <i class="icon-quote-left"></i>
                                 </span>
@@ -465,7 +465,7 @@
                     </div>
                     <div class="item">
                         <div class="testimony-wrap p-4 pb-5">
-                            <div class="user-img mb-5" style="background-image: url({{asset('images/person_2.jpg')}})">
+                            <div class="user-img mb-5" style="background-image: url({{asset('assets/images/person_2.jpg')}})">
                                 <span class="quote d-flex align-items-center justify-content-center">
                                     <i class="icon-quote-left"></i>
                                 </span>
@@ -479,7 +479,7 @@
                     </div>
                     <div class="item">
                         <div class="testimony-wrap p-4 pb-5">
-                            <div class="user-img mb-5" style="background-image: url({{asset('images/person_3.jpg')}})">
+                            <div class="user-img mb-5" style="background-image: url({{asset('assets/images/person_3.jpg')}})">
                                 <span class="quote d-flex align-items-center justify-content-center">
                                     <i class="icon-quote-left"></i>
                                 </span>
@@ -493,7 +493,7 @@
                     </div>
                     <div class="item">
                         <div class="testimony-wrap p-4 pb-5">
-                            <div class="user-img mb-5" style="background-image: url({{asset('images/person_1.jpg')}})">
+                            <div class="user-img mb-5" style="background-image: url({{asset('assets/images/person_1.jpg')}})">
                                 <span class="quote d-flex align-items-center justify-content-center">
                                     <i class="icon-quote-left"></i>
                                 </span>
@@ -507,7 +507,7 @@
                     </div>
                     <div class="item">
                         <div class="testimony-wrap p-4 pb-5">
-                            <div class="user-img mb-5" style="background-image: url({{asset('images/person_1.jpg')}})">
+                            <div class="user-img mb-5" style="background-image: url({{asset('assets/images/person_1.jpg')}})">
                                 <span class="quote d-flex align-items-center justify-content-center">
                                     <i class="icon-quote-left"></i>
                                 </span>
