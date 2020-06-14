@@ -1,5 +1,5 @@
 <div>
-    <div class="hero-wrap hero-bread" style="background-image: url('images/bg_6.jpg');">
+    <div class="hero-wrap hero-bread" style="background-image: url({{asset('assets/images/bg_6.jpg')}})">
         <div class="container">
             <div class="row no-gutters slider-text align-items-center justify-content-center">
                 <div class="col-md-9 ftco-animate text-center">
@@ -17,7 +17,7 @@
                     <div class="row">
                         <div class="col-sm-6 col-md-6 col-lg-4 ftco-animate">
                             <div class="product">
-                                <a href="#" class="img-prod"><img class="img-fluid" src="images/product-1.jpg" alt="Colorlib Template">
+                                <a href="#" class="img-prod"><img class="img-fluid" src="{{asset('assets/images/product-1.jpg')}}" alt="Colorlib Template">
                                     <span class="status">30%</span>
                                     <div class="overlay"></div>
                                 </a>
@@ -46,7 +46,7 @@
                         </div>
                         <div class="col-sm-6 col-md-6 col-lg-4 ftco-animate">
                             <div class="product">
-                                <a href="#" class="img-prod"><img class="img-fluid" src="images/product-2.jpg" alt="Colorlib Template">
+                                <a href="#" class="img-prod"><img class="img-fluid" src="{{asset('assets/images/product-2.jpg')}}" alt="Colorlib Template">
                                     <div class="overlay"></div>
                                 </a>
                                 <div class="text py-3 px-3">
@@ -74,7 +74,7 @@
                         </div>
                         <div class="col-sm-6 col-md-6 col-lg-4 ftco-animate">
                             <div class="product">
-                                <a href="#" class="img-prod"><img class="img-fluid" src="images/product-3.jpg" alt="Colorlib Template">
+                                <a href="#" class="img-prod"><img class="img-fluid" src="{{asset('assets/images/product-3.jpg')}}" alt="Colorlib Template">
                                     <div class="overlay"></div>
                                 </a>
                                 <div class="text py-3 px-3">
@@ -102,7 +102,7 @@
                         </div>
                         <div class="col-sm-6 col-md-6 col-lg-4 ftco-animate">
                             <div class="product">
-                                <a href="#" class="img-prod"><img class="img-fluid" src="images/product-4.jpg" alt="Colorlib Template">
+                                <a href="#" class="img-prod"><img class="img-fluid" src="{{asset('assets/images/product-4.jpg')}}" alt="Colorlib Template">
                                     <div class="overlay"></div>
                                 </a>
                                 <div class="text py-3 px-3">
@@ -130,7 +130,7 @@
                         </div>
                         <div class="col-sm-6 col-md-6 col-lg-4 ftco-animate">
                             <div class="product">
-                                <a href="#" class="img-prod"><img class="img-fluid" src="images/product-5.jpg" alt="Colorlib Template">
+                                <a href="#" class="img-prod"><img class="img-fluid" src="{{asset('assets/images/product-5.jpg')}}" alt="Colorlib Template">
                                     <div class="overlay"></div>
                                 </a>
                                 <div class="text py-3 px-3">
@@ -158,7 +158,7 @@
                         </div>
                         <div class="col-sm-6 col-md-6 col-lg-4 ftco-animate">
                             <div class="product">
-                                <a href="#" class="img-prod"><img class="img-fluid" src="images/product-6.jpg" alt="Colorlib Template">
+                                <a href="#" class="img-prod"><img class="img-fluid" src="{{asset('assets/images/product-6.jpg')}}" alt="Colorlib Template">
                                     <div class="overlay"></div>
                                 </a>
                                 <div class="text py-3 px-3">
@@ -186,7 +186,7 @@
                         </div>
                         <div class="col-sm-6 col-md-6 col-lg-4 ftco-animate">
                             <div class="product">
-                                <a href="#" class="img-prod"><img class="img-fluid" src="images/product-7.jpg" alt="Colorlib Template">
+                                <a href="#" class="img-prod"><img class="img-fluid" src="{{asset('assets/images/product-7.jpg')}}" alt="Colorlib Template">
                                     <div class="overlay"></div>
                                 </a>
                                 <div class="text py-3 px-3">
@@ -214,7 +214,7 @@
                         </div>
                         <div class="col-sm-6 col-md-6 col-lg-4 ftco-animate">
                             <div class="product">
-                                <a href="#" class="img-prod"><img class="img-fluid" src="images/product-8.jpg" alt="Colorlib Template">
+                                <a href="#" class="img-prod"><img class="img-fluid" src="{{asset('assets/images/product-8.jpg')}}" alt="Colorlib Template">
                                     <div class="overlay"></div>
                                 </a>
                                 <div class="text py-3 px-3">

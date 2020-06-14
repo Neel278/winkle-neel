@@ -16,6 +16,7 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
-Route::livewire('/shop', 'shop');
 
 Route::livewire('/home', 'index');
+Route::livewire('/shop', 'shop');
+Route::livewire('/shop-single', 'product-single');
