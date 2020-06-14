@@ -62,7 +62,7 @@
                                 <a class="dropdown-item" href="{{ url('/shop') }}">Shop</a>
                                 <a class="dropdown-item" href="{{ url('/shop-single') }}">Single Product</a>
                                 <a class="dropdown-item" href="{{ url('/cart') }}">Cart</a>
-                                <a class="dropdown-item" href="checkout.html">Checkout</a>
+                                <a class="dropdown-item" href="{{ url('/checkout') }}">Checkout</a>
                             </div>
                         </li>
                         <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>

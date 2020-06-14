@@ -21,3 +21,4 @@ Route::livewire('/home', 'index');
 Route::livewire('/shop', 'shop');
 Route::livewire('/shop-single', 'product-single');
 Route::livewire('/cart', 'cart');
+Route::livewire('/checkout', 'checkout');
