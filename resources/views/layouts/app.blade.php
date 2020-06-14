@@ -7,6 +7,7 @@
     <title>@yield('title')</title>
     <link rel="stylesheet" href="{{ asset('css/app.css') }}">
     @livewireStyles
+    <script src="{{ asset('js/app.js') }}" data-turbolinks-suppress-warning></script>
 </head>
 
 <body>
@@ -15,8 +16,6 @@
     @yield('content')
 
     @livewire('footer')
-
-    <script src="{{ asset('js/app.js') }}"></script>
 
     @livewireScripts
 </body>

@@ -19,6 +19,9 @@
     <link rel="stylesheet" href="{{asset('assets/css/flaticon.css')}}">
     <link rel="stylesheet" href="{{asset('assets/css/icomoon.css')}}">
     <link rel="stylesheet" href="{{asset('assets/css/style.css')}}">
+
+    <link rel="stylesheet" href="{{ asset('css/app.css') }}">
+
     </head>
 
     <body class="goto-here">
@@ -52,11 +55,11 @@
 
                 <div class="collapse navbar-collapse" id="ftco-nav">
                     <ul class="navbar-nav ml-auto">
-                        <li class="nav-item active"><a href="index.html" class="nav-link">Home</a></li>
+                        <li class="nav-item active"><a href="{{ url('/home') }}" class="nav-link" data-turbolinks-suppress-warning>Home</a></li>
                         <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="dropdown04" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Shop</a>
+                            <a class="nav-link dropdown-toggle" href="{{ url('/shop') }}" id="dropdown04" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" data-turbolinks-suppress-warning>Shop</a>
                             <div class="dropdown-menu" aria-labelledby="dropdown04">
-                                <a class="dropdown-item" href="shop.html">Shop</a>
+                                <a class="dropdown-item" href="{{ url('/shop') }}" data-turbolinks-suppress-warning>Shop</a>
                                 <a class="dropdown-item" href="product-single.html">Single Product</a>
                                 <a class="dropdown-item" href="cart.html">Cart</a>
                                 <a class="dropdown-item" href="checkout.html">Checkout</a>
@@ -72,3 +75,4 @@
             </div>
         </nav>
 </div>
+<script src="{{ asset('js/app.js') }}"></script>
