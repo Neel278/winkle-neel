@@ -13,6 +13,8 @@
 
     @yield('content')
 
+    @livewire('footer')
+
     @livewireScripts
 </body>
 
