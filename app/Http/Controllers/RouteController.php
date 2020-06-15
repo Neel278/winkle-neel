@@ -21,8 +21,8 @@ class RouteController extends Controller
         $this->validate($request, [
             'first_name' => 'required',
             'last_name' => 'required',
-            'email_id' => 'required|email|unique:users',
-            'phone' => 'required|numeric',
+            'email' => 'required|email|unique:users',
+            'phone' => 'required|numeric|min:10',
             'password' => 'required|confirmed|min:4'
         ]);
 
@@ -31,13 +31,16 @@ class RouteController extends Controller
         $user = new User();
         $user->first_name = $request->input('first_name');
         $user->last_name = $request->input('last_name');
-        $user->email = $request->input('email_id');
+        $user->email = $request->input('email');
         $user->phone = $request->input('phone');
         $user->password = $password;
 
         $user->save();
 
         Auth::login($user);
-        return redirect()->url('/home');
+        return redirect()->route('home');
+    }
+    public function postLogin()
+    {
     }
 }

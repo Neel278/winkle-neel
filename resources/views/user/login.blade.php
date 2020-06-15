@@ -14,10 +14,10 @@
 
 <section class="ftco-section">
     <div class="container">
-
+        @include('messages.error')
         <div class="row justify-content-center">
             <div class="col-xl-8 ftco-animate">
-                <form action="" method="POST" class="billing-form">
+                <form action="{{ route('login') }}" method="POST" class="billing-form">
                     @csrf
                     <h3 class="mb-4 billing-heading">Login Details</h3>
                     <div class="row align-items-end">

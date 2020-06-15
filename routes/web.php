@@ -17,7 +17,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::livewire('/home', 'index');
+Route::livewire('/home', 'index')->name('home');
 Route::livewire('/shop', 'shop');
 Route::livewire('/shop-single', 'product-single');
 Route::livewire('/cart', 'cart');

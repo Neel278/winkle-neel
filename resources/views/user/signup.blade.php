@@ -18,9 +18,10 @@
 
     <section class="ftco-section">
         <div class="container">
+            @include('messages.error')
             <div class="row justify-content-center">
                 <div class="col-xl-8 ftco-animate">
-                    <form action="route('signup')" method="POST" class="billing-form">
+                    <form action="{{route('signup')}}" method="POST" class="billing-form">
                         @csrf
                         <h3 class="mb-4 billing-heading">User Details</h3>
                         <div class="row align-items-end">
@@ -40,7 +41,7 @@
                             <div class="col-md-6">
                                 <div class="form-group">
                                     <label for="email_id">Email Address</label>
-                                    <input type="email" name="email_id" id="email_id" class="form-control" placeholder="Email">
+                                    <input type="email" name="email" id="email_id" class="form-control" placeholder="Email">
                                 </div>
                             </div>
                             <div class="col-md-6">
@@ -53,7 +54,7 @@
                             <div class="col-md-6">
                                 <div class="form-group">
                                     <label for="signup_password">Password</label>
-                                    <input type="password" name="signup_password" id="signup_password" class="form-control" placeholder="Password">
+                                    <input type="password" name="password" id="signup_password" class="form-control" placeholder="Password">
                                 </div>
                             </div>
                             <div class="col-md-6">
