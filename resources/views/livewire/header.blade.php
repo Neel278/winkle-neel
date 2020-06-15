@@ -67,12 +67,22 @@
                         </li>
                         <li class="nav-item"><a href="{{ url('/about') }}" class="nav-link">About</a></li>
                         <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="dropdown04" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">User</a>
+                            <a class="nav-link dropdown-toggle" href="#" id="dropdown04" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span class="icon-user"></span>
+                                @if(auth()->user())
+                                {{ auth()->user()->first_name }}
+                                @else
+                                Guest
+                                @endif
+                            </a>
                             <div class="dropdown-menu" aria-labelledby="dropdown04">
+                                @if(auth()->user())
+                                <a class="dropdown-item" href="#">Profile</a>
+                                <a class="dropdown-item" href="{{ route('logout') }}">Logout</a>
+                                @else
                                 <a class="dropdown-item" href="{{ url('/login') }}">Login</a>
                                 <a class="dropdown-item" href="{{ url('/signup') }}">SignUp</a>
-                                <!-- <a class="dropdown-item" href="{{ url('/cart') }}">Cart</a> -->
-                                <!-- <a class="dropdown-item" href="{{ url('/checkout') }}">Checkout</a> -->
+                                @endif
+
                             </div>
                         </li>
                         <li class="nav-item"><a href="{{ url('/contact') }}" class="nav-link">Contact</a></li>
