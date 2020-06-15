@@ -15,7 +15,7 @@
                                     <h1 class="mb-4 mt-3">Catch Your Own <br><span>Stylish &amp; Look</span></h1>
                                     <p>A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country.</p>
 
-                                    <p><a href="#" class="btn btn-primary px-5 py-3 mt-3">Discover Now</a></p>
+                                    <p><a href="{{ url('/shop') }}" class="btn btn-primary px-5 py-3 mt-3">Discover Now</a></p>
                                 </div>
                             </div>
                         </div>
@@ -37,7 +37,7 @@
                                     <h1 class="mb-4 mt-3">A Thouroughly <span>Modern</span> Woman</h1>
                                     <p>A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country.</p>
 
-                                    <p><a href="#" class="btn btn-primary px-5 py-3 mt-3">Shop Now</a></p>
+                                    <p><a href="{{ url('/shop') }}" class="btn btn-primary px-5 py-3 mt-3">Shop Now</a></p>
                                 </div>
                             </div>
                         </div>
@@ -115,17 +115,34 @@
         </div>
         <div class="container">
             <div class="row">
+                <!-- ========================================================== -->
+                @if(count($products) > 0)
+                @foreach($products as $product)
                 <div class="col-sm col-md-6 col-lg ftco-animate">
                     <div class="product">
-                        <a href="#" class="img-prod"><img class="img-fluid" src="{{asset('assets/images/product-1.jpg')}}" alt="Colorlib Template">
-                            <span class="status">30%</span>
+                        <a href="#" class="img-prod">
+                            @if(Storage::disk('local')->has($product->category.'-'.$product->id.'.webp'))
+                            <img class="img-fluid" src="{{asset('assets/product/'. $product->category . '-' . $product->id . '.webp')}}" alt="Colorlib Template">
+                            @else
+                            <img class="img-fluid" src="{{ URL::to('src/images/no_picture.png') }}" alt="Colorlib Template">
+                            @endif
+                            @if($product->price_off > 0)
+                            <span class="status">
+                                {{ $product->price_off }}%
+                            </span>
+                            @endif
                             <div class="overlay"></div>
                         </a>
                         <div class="text py-3 px-3">
-                            <h3><a href="#">Floral Jackquard Pullover</a></h3>
+                            <h3><a href="#">{{ $product->name }}</a></h3>
                             <div class="d-flex">
                                 <div class="pricing">
-                                    <p class="price"><span class="mr-2 price-dc">$120.00</span><span class="price-sale">$80.00</span></p>
+                                    <p class="price">
+                                        @if($product->price_off > 0)
+                                        <span class="mr-2 price-dc">${{ $product->price }}</span>
+                                        @endif
+                                        <span class="price-sale">${{ $product->price - (($product->price_off/100)*$product->price) }}</span>
+                                    </p>
                                 </div>
                                 <div class="rating">
                                     <p class="text-right">
@@ -139,95 +156,13 @@
                             </div>
                             <p class="bottom-area d-flex px-3">
                                 <a href="#" class="add-to-cart text-center py-2 mr-1"><span>Add to cart <i class="ion-ios-add ml-1"></i></span></a>
-                                <a href="#" class="buy-now text-center py-2">Buy now<span><i class="ion-ios-cart ml-1"></i></span></a>
                             </p>
                         </div>
                     </div>
                 </div>
-                <div class="col-sm col-md-6 col-lg ftco-animate">
-                    <div class="product">
-                        <a href="#" class="img-prod"><img class="img-fluid" src="{{asset('assets/images/product-2.jpg')}}" alt="Colorlib Template">
-                            <div class="overlay"></div>
-                        </a>
-                        <div class="text py-3 px-3">
-                            <h3><a href="#">Floral Jackquard Pullover</a></h3>
-                            <div class="d-flex">
-                                <div class="pricing">
-                                    <p class="price"><span>$120.00</span></p>
-                                </div>
-                                <div class="rating">
-                                    <p class="text-right">
-                                        <a href="#"><span class="ion-ios-star-outline"></span></a>
-                                        <a href="#"><span class="ion-ios-star-outline"></span></a>
-                                        <a href="#"><span class="ion-ios-star-outline"></span></a>
-                                        <a href="#"><span class="ion-ios-star-outline"></span></a>
-                                        <a href="#"><span class="ion-ios-star-outline"></span></a>
-                                    </p>
-                                </div>
-                            </div>
-                            <p class="bottom-area d-flex px-3">
-                                <a href="#" class="add-to-cart text-center py-2 mr-1"><span>Add to cart <i class="ion-ios-add ml-1"></i></span></a>
-                                <a href="#" class="buy-now text-center py-2">Buy now<span><i class="ion-ios-cart ml-1"></i></span></a>
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm col-md-6 col-lg ftco-animate">
-                    <div class="product">
-                        <a href="#" class="img-prod"><img class="img-fluid" src="{{asset('assets/images/product-3.jpg')}}" alt="Colorlib Template">
-                            <div class="overlay"></div>
-                        </a>
-                        <div class="text py-3 px-3">
-                            <h3><a href="#">Floral Jackquard Pullover</a></h3>
-                            <div class="d-flex">
-                                <div class="pricing">
-                                    <p class="price"><span>$120.00</span></p>
-                                </div>
-                                <div class="rating">
-                                    <p class="text-right">
-                                        <a href="#"><span class="ion-ios-star-outline"></span></a>
-                                        <a href="#"><span class="ion-ios-star-outline"></span></a>
-                                        <a href="#"><span class="ion-ios-star-outline"></span></a>
-                                        <a href="#"><span class="ion-ios-star-outline"></span></a>
-                                        <a href="#"><span class="ion-ios-star-outline"></span></a>
-                                    </p>
-                                </div>
-                            </div>
-                            <p class="bottom-area d-flex px-3">
-                                <a href="#" class="add-to-cart text-center py-2 mr-1"><span>Add to cart <i class="ion-ios-add ml-1"></i></span></a>
-                                <a href="#" class="buy-now text-center py-2">Buy now<span><i class="ion-ios-cart ml-1"></i></span></a>
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm col-md-6 col-lg ftco-animate">
-                    <div class="product">
-                        <a href="#" class="img-prod"><img class="img-fluid" src="{{asset('assets/images/product-4.jpg')}}" alt="Colorlib Template">
-                            <div class="overlay"></div>
-                        </a>
-                        <div class="text py-3 px-3">
-                            <h3><a href="#">Floral Jackquard Pullover</a></h3>
-                            <div class="d-flex">
-                                <div class="pricing">
-                                    <p class="price"><span>$120.00</span></p>
-                                </div>
-                                <div class="rating">
-                                    <p class="text-right">
-                                        <a href="#"><span class="ion-ios-star-outline"></span></a>
-                                        <a href="#"><span class="ion-ios-star-outline"></span></a>
-                                        <a href="#"><span class="ion-ios-star-outline"></span></a>
-                                        <a href="#"><span class="ion-ios-star-outline"></span></a>
-                                        <a href="#"><span class="ion-ios-star-outline"></span></a>
-                                    </p>
-                                </div>
-                            </div>
-                            <p class="bottom-area d-flex px-3">
-                                <a href="#" class="add-to-cart text-center py-2 mr-1"><span>Add to cart <i class="ion-ios-add ml-1"></i></span></a>
-                                <a href="#" class="buy-now text-center py-2">Buy now<span><i class="ion-ios-cart ml-1"></i></span></a>
-                            </p>
-                        </div>
-                    </div>
-                </div>
+                @endforeach
+                @endif
+                <!-- =============================================================== -->
             </div>
         </div>
     </section>
@@ -242,7 +177,7 @@
                     <div class="text py-3 py-md-5">
                         <h2 class="mb-4">New Women's Clothing Summer Collection 2019</h2>
                         <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p>
-                        <p><a href="#" class="btn btn-white px-4 py-3">Shop now</a></p>
+                        <p><a href="{{ url('/shop') }}" class="btn btn-white px-4 py-3">Shop now</a></p>
                     </div>
                 </div>
             </div>
@@ -255,7 +190,7 @@
                     <div class="text text-2 py-md-5">
                         <h2 class="mb-4">New Men's Clothing Summer Collection 2019</h2>
                         <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p>
-                        <p><a href="#" class="btn btn-white px-4 py-3">Shop now</a></p>
+                        <p><a href="{{ url('/shop') }}" class="btn btn-white px-4 py-3">Shop now</a></p>
                     </div>
                 </div>
             </div>
@@ -424,93 +359,6 @@
                                 <div class="text">
                                     <strong class="number" data-number="100">0</strong>
                                     <span>Awards</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="ftco-section testimony-section">
-        <div class="container">
-            <div class="row justify-content-center mb-5 pb-3">
-                <div class="col-md-7 heading-section ftco-animate">
-                    <h2 class="mb-4">Our satisfied customer says</h2>
-                    <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in</p>
-                </div>
-            </div>
-            <div class="row ftco-animate">
-                <div class="col-md-12">
-                    <div class="carousel-testimony owl-carousel">
-                        <div class="item">
-                            <div class="testimony-wrap p-4 pb-5">
-                                <div class="user-img mb-5" style="background-image: url({{asset('assets/images/person_1.jpg')}})">
-                                    <span class="quote d-flex align-items-center justify-content-center">
-                                        <i class="icon-quote-left"></i>
-                                    </span>
-                                </div>
-                                <div class="text">
-                                    <p class="mb-5 pl-4 line">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
-                                    <p class="name">Garreth Smith</p>
-                                    <span class="position">Marketing Manager</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="item">
-                            <div class="testimony-wrap p-4 pb-5">
-                                <div class="user-img mb-5" style="background-image: url({{asset('assets/images/person_2.jpg')}})">
-                                    <span class="quote d-flex align-items-center justify-content-center">
-                                        <i class="icon-quote-left"></i>
-                                    </span>
-                                </div>
-                                <div class="text">
-                                    <p class="mb-5 pl-4 line">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
-                                    <p class="name">Garreth Smith</p>
-                                    <span class="position">Interface Designer</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="item">
-                            <div class="testimony-wrap p-4 pb-5">
-                                <div class="user-img mb-5" style="background-image: url({{asset('assets/images/person_3.jpg')}})">
-                                    <span class="quote d-flex align-items-center justify-content-center">
-                                        <i class="icon-quote-left"></i>
-                                    </span>
-                                </div>
-                                <div class="text">
-                                    <p class="mb-5 pl-4 line">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
-                                    <p class="name">Garreth Smith</p>
-                                    <span class="position">UI Designer</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="item">
-                            <div class="testimony-wrap p-4 pb-5">
-                                <div class="user-img mb-5" style="background-image: url({{asset('assets/images/person_1.jpg')}})">
-                                    <span class="quote d-flex align-items-center justify-content-center">
-                                        <i class="icon-quote-left"></i>
-                                    </span>
-                                </div>
-                                <div class="text">
-                                    <p class="mb-5 pl-4 line">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
-                                    <p class="name">Garreth Smith</p>
-                                    <span class="position">Web Developer</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="item">
-                            <div class="testimony-wrap p-4 pb-5">
-                                <div class="user-img mb-5" style="background-image: url({{asset('assets/images/person_1.jpg')}})">
-                                    <span class="quote d-flex align-items-center justify-content-center">
-                                        <i class="icon-quote-left"></i>
-                                    </span>
-                                </div>
-                                <div class="text">
-                                    <p class="mb-5 pl-4 line">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
-                                    <p class="name">Garreth Smith</p>
-                                    <span class="position">System Analyst</span>
                                 </div>
                             </div>
                         </div>
