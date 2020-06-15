@@ -20,20 +20,28 @@
                             <div class="col-md-12">
                                 <div class="form-group">
                                     <label for="email">Email Address</label>
-                                    <input type="email" class="form-control" placeholder="Email">
+                                    <input type="email" id="email" class="form-control" placeholder="Email">
                                 </div>
                             </div>
                             <div class="w-100"></div>
                             <div class="col-md-12">
                                 <div class="form-group">
                                     <label for="password">Password</label>
-                                    <input type="password" class="form-control" placeholder="Password">
+                                    <input type="password" id="password" class="form-control" placeholder="Password">
                                 </div>
                             </div>
                             <div class="w-100"></div>
                             <div class="col-md-12 offset-md-5 ">
                                 <div class="form-group">
                                     <button class="btn btn-primary py-3 px-4" type="submit">Login</button>
+                                </div>
+                            </div>
+                            <div class="w-100"></div>
+                            <div class="col-md-12 offset-md-4">
+                                <div class="form-group mt-4">
+                                    <div class="radio">
+                                        <label class="mr-3"> Don`t have an Account ? <a href="{{ url('/signup') }}">Signup Here</a> </label>
+                                    </div>
                                 </div>
                             </div>
                         </div>
