@@ -40,7 +40,22 @@ class RouteController extends Controller
         Auth::login($user);
         return redirect()->route('home');
     }
-    public function postLogin()
+    public function postLogin(Request $request)
     {
+        $this->validate($request, [
+            'email' => 'required|email',
+            'password' => 'required|min:4'
+        ]);
+
+        if (Auth::attempt(['email' => $request->input('email'), 'password' => $request->input('password')])) {
+            return redirect()->route('home');
+        } else {
+            return view('user.login')->with(['err' => 'wrong credentials!!']);
+        }
+    }
+    public function logout()
+    {
+        Auth::logout();
+        return redirect()->route('home');
     }
 }

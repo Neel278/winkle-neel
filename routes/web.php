@@ -30,3 +30,7 @@ Route::post('/signup', [
     'uses' => 'RouteController@postSignup',
     'as' => 'signup'
 ]);
+Route::post('/login', [
+    'uses' => 'RouteController@postLogin',
+    'as' => 'login'
+]);
