@@ -24,3 +24,4 @@ Route::livewire('/cart', 'cart');
 Route::livewire('/checkout', 'checkout');
 Route::livewire('/about', 'about');
 Route::livewire('/contact', 'contact');
+Route::livewire('/login', 'login');

@@ -66,7 +66,15 @@
                             </div>
                         </li>
                         <li class="nav-item"><a href="{{ url('/about') }}" class="nav-link">About</a></li>
-                        <!-- <li class="nav-item"><a href="blog.html" class="nav-link">Blog</a></li> -->
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="dropdown04" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">User</a>
+                            <div class="dropdown-menu" aria-labelledby="dropdown04">
+                                <a class="dropdown-item" href="{{ url('/login') }}">Login</a>
+                                <a class="dropdown-item" href="{{ url('/shop-single') }}">SignUp</a>
+                                <!-- <a class="dropdown-item" href="{{ url('/cart') }}">Cart</a> -->
+                                <!-- <a class="dropdown-item" href="{{ url('/checkout') }}">Checkout</a> -->
+                            </div>
+                        </li>
                         <li class="nav-item"><a href="{{ url('/contact') }}" class="nav-link">Contact</a></li>
                         <li class="nav-item cta cta-colored"><a href="{{ url('/cart') }}" class="nav-link"><span class="icon-shopping_cart"></span>[0]</a></li>
 
