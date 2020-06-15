@@ -24,5 +24,9 @@ Route::livewire('/cart', 'cart');
 Route::livewire('/checkout', 'checkout');
 Route::livewire('/about', 'about');
 Route::livewire('/contact', 'contact');
-Route::livewire('/login', 'login');
-Route::livewire('/signup', 'signup');
+Route::get('/login', 'RouteController@login');
+Route::get('/signup', 'RouteController@signup');
+Route::post('/signup', [
+    'uses' => 'RouteController@postSignup',
+    'as' => 'signup'
+]);
